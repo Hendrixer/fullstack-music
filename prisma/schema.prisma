@@ -29,6 +29,7 @@ model Song {
   artistId  Int
   playlists Playlist[]
   duration  Int
+  url       String
 }
 
 model Artist {
