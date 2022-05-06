@@ -7,7 +7,7 @@ export default function middleware(req) {
     const token = req.cookies.TRAX_ACCESS_TOKEN
 
     if (!token) {
-      return NextResponse.redirect('/signin')
+      return NextResponse.rewrite(new URL('/signin', req.url))
     }
   }
 }
